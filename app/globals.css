@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #6B0000;
+  color: #f8fafc;
+}
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+}
+
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0.15) 4px
+  );
+}
+
+.screen-glow {
+  box-shadow: inset 0 0 30px rgba(0, 245, 255, 0.05), 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.pokedex-body {
+  background: linear-gradient(145deg, #CC0000 0%, #AA0000 50%, #880000 100%);
+  box-shadow: 4px 4px 0px #660000, -2px -2px 0px #EE2222;
+}
+
+.pokedex-hinge {
+  background: linear-gradient(to right, #880000, #CC0000, #880000);
+}
+
+.lens-ring {
+  box-shadow:
+    0 0 0 3px #1a1a2e,
+    0 0 0 6px #3B82F6,
+    0 0 0 9px #1a1a2e,
+    0 0 0 12px rgba(59,130,246,0.3);
+}
+
+.capture-btn {
+  background: radial-gradient(circle at 35% 35%, #EE2222, #AA0000 60%, #660000);
+  box-shadow:
+    0 6px 0 #550000,
+    0 0 0 4px #880000,
+    0 0 0 7px #1a1a2e,
+    0 0 20px rgba(204,0,0,0.4);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.capture-btn:active {
+  transform: translateY(3px);
+  box-shadow:
+    0 3px 0 #550000,
+    0 0 0 4px #880000,
+    0 0 0 7px #1a1a2e,
+    0 0 10px rgba(204,0,0,0.2);
+}
+
+.sync-btn {
+  background: linear-gradient(to bottom, #1e3a1e, #0f1f0f);
+  border: 2px solid #22C55E;
+  box-shadow: 0 0 8px rgba(34,197,94,0.3), inset 0 1px 0 rgba(34,197,94,0.2);
+  transition: all 0.15s;
+}
+
+.sync-btn:hover:not(:disabled) {
+  box-shadow: 0 0 16px rgba(34,197,94,0.5), inset 0 1px 0 rgba(34,197,94,0.3);
+}
+
+.sync-btn:disabled {
+  border-color: #374151;
+  box-shadow: none;
+  background: linear-gradient(to bottom, #1f2937, #111827);
+}
+
+.card-holographic {
+  background: linear-gradient(135deg, #0f172a 0%, #0d1b2a 50%, #0a1628 100%);
+  border: 1px solid #1e3a5f;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}
